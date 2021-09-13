@@ -10,19 +10,26 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
+        //Inputs
         System.out.print("What is your first number? ");
-        int numOne = scanner.nextInt();
+        String strNum1 = scanner.next();
         System.out.print("What is your second number? ");
-        int numTwo = scanner.nextInt();
+        String strNum2 = scanner.next();
 
-        int sum = numOne + numTwo;
-        int product = numOne * numTwo;
-        int quotient = numOne / numTwo;
-        int subtract = numOne - numTwo;
+        //Parsing
+        int num1 = Integer.parseInt(strNum1);
+        int num2 = Integer.parseInt(strNum2);
 
-        System.out.println(numOne + " + " + numTwo + " = " + sum);
-        System.out.println(numOne + " - " + numTwo + " = " + subtract);
-        System.out.println(numOne + " * " + numTwo + " = " + product);
-        System.out.println(numOne + " / " + numTwo + " = " + quotient);
+        //Operations
+        int sum = num1 + num2;
+        int product = num1 * num2;
+        int quotient = num1 / num2;
+        int subtract = num1 - num2;
+
+        //Output
+        System.out.println(num1 + " + " + num2 + " = " + sum);
+        System.out.println(num1 + " - " + num2 + " = " + subtract);
+        System.out.println(num1 + " * " + num2 + " = " + product);
+        System.out.println(num1 + " / " + num2 + " = " + quotient);
     }
 }
